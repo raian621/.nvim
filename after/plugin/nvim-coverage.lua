@@ -1,4 +1,8 @@
-require("coverage").setup({
+local coverage = require("coverage")
+
+coverage.setup({
+  auto_reload = true,
+  auto_reload_timeout_ms = 200,
 	commands = true, -- create commands
 	highlights = {
 		-- customize highlight groups created by the plugin
@@ -18,3 +22,11 @@ require("coverage").setup({
 		-- customize language specific settings
 	},
 })
+
+vim.keymap.set("n", "<leader>ccl", coverage.load)
+vim.keymap.set("n", "<leader>ccc", coverage.clear)
+vim.keymap.set("n", "<leader>ccs", coverage.show)
+vim.keymap.set("n", "<leader>cch", coverage.hide)
+vim.keymap.set("n", "<leader>ccr", coverage.summary)
+vim.keymap.set("n", "<leader>cct", coverage.toggle)
+
