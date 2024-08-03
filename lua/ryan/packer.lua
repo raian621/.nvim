@@ -32,4 +32,8 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
   }
+  use({
+    "andythigpen/nvim-coverage",
+    requires = "nvim-lua/plenary.nvim",
+  })
 end)
