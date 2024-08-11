@@ -1,4 +1,9 @@
-require'nvim-treesitter.configs'.setup {
+local treesitter_install = require("nvim-treesitter.install")
+
+treesitter_install.prefer_git = false
+treesitter_install.compilers = { "clang", "gcc" }
+
+require("nvim-treesitter.configs").setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = { "c", "cpp", "go", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "rust", "typescript" },
 
