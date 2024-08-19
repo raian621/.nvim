@@ -23,7 +23,7 @@ require('mason-lspconfig').setup({
   ensure_installed = {
     'tsserver',
     'rust_analyzer',
-    'cmake',
+    'gopls',
     'clangd',
   },
   handlers = {
